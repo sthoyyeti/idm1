@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "USER")
-public class User extends BaseId implements Serializable {
+public class User extends EntityBase implements Serializable {
     @Column(name = "NAME")
     private String name;
     @Column(name = "USERNAME")
@@ -57,7 +57,7 @@ public class User extends BaseId implements Serializable {
     }
 
     public User(Long id, String name, String userName, String emailId, String password, String salt, Timestamp passwordCreatedDate, Boolean isChangePassword, Integer loginFailCount, Boolean isEmailVerified, String enterpriseCode, Character status, Boolean userType, Timestamp passwordExpiryDate, Timestamp lastLoginDate) {
-        super(id);
+       // super(id);
         this.name = name;
         this.userName = userName;
         this.emailId = emailId;
@@ -75,7 +75,7 @@ public class User extends BaseId implements Serializable {
     }
 
     public User(Timestamp createdAt, Timestamp updatedAt, Long id, String name, String userName, String emailId, String password, String salt, Timestamp passwordCreatedDate, Boolean isChangePassword, Integer loginFailCount, Boolean isEmailVerified, String enterpriseCode, Character status, Boolean userType, Timestamp passwordExpiryDate, Timestamp lastLoginDate) {
-        super(createdAt, updatedAt, id);
+       // super(createdAt, updatedAt, id);
         this.name = name;
         this.userName = userName;
         this.emailId = emailId;

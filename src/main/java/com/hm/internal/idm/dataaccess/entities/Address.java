@@ -6,7 +6,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "ADDRESS")
 
-public class Address extends BaseId implements Serializable {
+public class Address extends EntityBase implements Serializable {
 
 
     @ManyToOne(fetch = FetchType.LAZY)

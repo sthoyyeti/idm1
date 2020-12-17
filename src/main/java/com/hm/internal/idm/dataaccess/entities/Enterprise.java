@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "ENTERPRISE")
-public class Enterprise extends BaseId implements Serializable {
+public class Enterprise extends EntityBase implements Serializable {
     @Column(name = "NAME")
     private String name;
     @Column(name = "STATUS")
@@ -17,21 +17,11 @@ public class Enterprise extends BaseId implements Serializable {
     private String code;
     @Column(name = "ENTERPRISE_TYPE")
     private String type;
-    public Enterprise (){};
+    public Enterprise(){
 
-    public Enterprise(String name) {
-        this.name = name;
-    }
+    };
 
-    public Enterprise(Long id, String name) {
-        super(id);
-        this.name = name;
-    }
 
-    public Enterprise(Timestamp createdAt, Timestamp updatedAt, Long id, String name) {
-        super(createdAt, updatedAt, id);
-        this.name = name;
-    }
 
     public String getName() {
         return name;
